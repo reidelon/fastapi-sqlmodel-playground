@@ -1,0 +1,5 @@
+fastapi[standard]
+#psycopg2-binary==2.9.6
+sqlmodel==0.0.8
+uvicorn==0.22.0
+aiosqlite
