@@ -47,6 +47,8 @@ uvicorn app.main:app --reload
 | GET | `/ping` | Health check |
 | GET | `/songs` | List all songs |
 | POST | `/songs` | Add a song |
+| GET | `/docs` | Swagger UI — interactive docs |
+| GET | `/redoc` | ReDoc — alternative docs |
 
 ## Environment
 
