@@ -10,6 +10,7 @@ The main goal was understanding how async I/O works end-to-end — from the ASGI
 - **SQLAlchemy AsyncEngine** — async database engine (not SQLModel's default sync engine)
 - **aiosqlite** — async SQLite driver
 - **Uvicorn** — ASGI server
+- **Alembic** — database migrations
 
 ## Why AsyncEngine directly?
 
@@ -32,6 +33,35 @@ app/
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
+
+## Migrations
+
+This project uses [Alembic](https://alembic.sqlalchemy.org/) for database migrations.
+
+Apply all migrations:
+
+```bash
+alembic upgrade head
+```
+
+Create a new migration after model changes:
+
+```bash
+alembic revision --autogenerate -m "description"
+```
+
+Check current state:
+
+```bash
+alembic current
+alembic history
+```
+
+Roll back to a previous revision:
+
+```bash
+alembic downgrade <revision_id>
 ```
 
 ## Run

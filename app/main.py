@@ -7,10 +7,10 @@ from app.models import Song, SongCreate
 
 app = FastAPI()
 
-
-@app.on_event("startup")
-async def on_startup():
-    await init_db()
+# commenting it out bc the schema is stable and the tables already exist in the DB
+# @app.on_event("startup")
+# async def on_startup():
+#     await init_db()
 
 
 @app.get("/ping")
