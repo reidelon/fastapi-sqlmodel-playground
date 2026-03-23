@@ -4,3 +4,5 @@ sqlmodel==0.0.8
 uvicorn==0.22.0
 aiosqlite
 alembic==1.11.1
+google-cloud-pubsub
+google-cloud-storage
